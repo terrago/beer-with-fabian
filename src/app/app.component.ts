@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {FeierabendBier} from './FeierabendBier';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'beer-with-fabian';
+
+  constructor() {
+    new FeierabendBier().sendResponse(FeierabendBier.beerType[0],'Carsten');
+  }
 }
+
